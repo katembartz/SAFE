@@ -33,7 +33,7 @@ cd SAFE
 pip install .
 ```
 
-Run SAFE on your directory of segmentations. Additional details can be found in section 2 below.
+Run SAFE on your directory of segmentations. Additional details can be found in section 3 below.
 
 ```
 safe \
