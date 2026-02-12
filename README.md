@@ -10,7 +10,7 @@ Automated quality assurance of segmentation techniques with SAFE: statistically-
 
 Algorithms that segment brain structures into distinct tissue types, parcellate tissues into structural regions, and perform volumetric analyses can provide information about cognitive functions and indicate the onset of neurodegenerative diseases. Quality assurance (QA) is a critical final step after processing when using segmentation results for scientific research or clinical management. Although manual QA strategies are the most reliable solutions for verifying segmentations, these approaches are time consuming and extremely difficult, even for experienced neuroanatomy experts. Our work addresses segmentation algorithms that lack an accompanying QA method.
 
-We construct a normative database (mean and standard deviation) of brain region volumes employing statistics generated on 38,251 publicly available magnetic resonance (MR) images. Manual quality assurance was performed to exclude images with limited field-of-view (FOV), aggressive defacing, motion artifacts, noise, extreme atrophy, visual pathology, and other defects. We then propose the statistically-based failure evaluation (SAFE) approach, a binary classification method to accept or reject a brain segmentation based on the constructed normative values. This method is empirically validated on corrupted images using two algorithms: spatially localized atlas network tiles (SLANT) 3D whole brain segmentation and the SynthSeg segmentation tool, which is part of the FreeSurfer software package.
+We construct a normative database (mean and standard deviation) of brain region volumes employing statistics generated on **38,251** publicly available magnetic resonance (MR) images. Manual quality assurance was performed to exclude images with limited field-of-view (FOV), aggressive defacing, motion artifacts, noise, extreme atrophy, visual pathology, and other defects. We then propose the statistically-based failure evaluation (SAFE) approach, a binary classification method to accept or reject a brain segmentation based on the constructed normative values. This method is empirically validated on corrupted images using two algorithms: spatially localized atlas network tiles (SLANT) 3D whole brain segmentation and the SynthSeg segmentation tool, which is part of the FreeSurfer software package.
 
 ## 2. Model Distribution Database
 
@@ -41,12 +41,12 @@ If `--results-dir` is not specified, the output results are stored in a new fold
 The output results include two csv files indicating the SAFE decisions for the corresponding SLANT and SynthSeg segmentations, respectively. Some additional information is provided to aid in further analysis of the data:
 
 1. _zero_count_: counts how many regions were missing (volume of 0 $mm^3$) -- factor in SAFE decision
-2. _occ_95_count_: counts how many regions by brain occupancy were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision, but is provided to allow additional analysis.
+2. _occ_95_count_: counts how many regions by brain occupancy were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision but is provided to allow additional analysis.
 3. _occ_99_count_: counts how many regions by brain occupancy were outliers (outside of 99% CI) -- factor in SAFE decision
-4. _vol_95_count_: counts how many regions by volume were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision, but is provided to allow additional analysis.
+4. _vol_95_count_: counts how many regions by volume were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision but is provided to allow additional analysis.
 5. _vol_99_count_: counts how many regions by volume were outliers (outside of 99% CI) -- factor in SAFE decision
 
-The regions included in each of these five groups are also listed in the resulting data tables. These categories are mutually exclusive.
+The regions included in each of these five groups are also listed in the ouput data tables. These categories are mutually exclusive.
 
 
 ## 4. Acknowledgments
