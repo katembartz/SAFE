@@ -1,4 +1,4 @@
-<img width="1148" height="715" alt="image" src="https://github.com/user-attachments/assets/75ac02d6-4d49-46ca-9811-2cd42c1c8e53" />
+<img width="952" height="593" alt="image" src="https://github.com/user-attachments/assets/75ac02d6-4d49-46ca-9811-2cd42c1c8e53" />
 
 
 # SAFE
