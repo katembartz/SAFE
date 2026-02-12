@@ -36,7 +36,7 @@ safe \
   [--slant]
 ```
 
-If `--results-dir` is not specified, the output results are stored in a new folder on the path given after `--in-dir`. Include the arguments `--synth` and `--slant` to specify which types of segmentations are present in path for `--in-dir`. **Note:** the segmentations must contain the string '_slant' or '_synth' to denote which method (SLANT or SynthSeg, respectively) were applied to generate the resulting segmentation.
+If `--results-dir` is not specified, the output results are stored in a new folder on the path given after `--in-dir`. Include the arguments `--synth` and `--slant` to specify which types of segmentations are present in path for `--in-dir`. **Note:** the segmentations must contain the string '_slant' or '_synth' to denote which method (SLANT or SynthSeg, respectively) was applied to generate the resulting segmentation.
 
 The output results include two csv files indicating the SAFE decisions for the corresponding SLANT and SynthSeg segmentations, respectively. Some additional information is provided to aid in further analysis of the data:
 
