@@ -51,5 +51,7 @@ The regions included in each of these five groups are also listed in the resulti
 
 ## 4. Acknowledgments
 
+This work was partially supported by the National Science Foundation Graduate Research Fellowships under Grant No. DGE-2139757 (S.P. Hays) and Grant No. DGE-1746891 (S.W. Remedios). The project is also partially supported by CDMRP W81XWH2010912 (J.L. Prince), a grant from the NIH through the NIBIB R01-EB036013 (J.L. Prince), and a Johns Hopkins Discovery Grant (A. Carass).
+
 We refer to the manuscript associated with this work for full citations and references to the two segmentation methods: SLANT and SynthSeg. The code for both segmentation techniques is open source. Full acknowledgements of the publicly available databases used in this work can also be found in the manuscript associated with this project.
 
