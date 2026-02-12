@@ -1,10 +1,48 @@
 <img width="952" height="593" alt="image" src="https://github.com/user-attachments/assets/75ac02d6-4d49-46ca-9811-2cd42c1c8e53" />
 
-
 # SAFE
 Automated quality assurance of segmentation techniques with SAFE: statistically-based failure evaluation.
 
-**Publication**: Bartz, K.M. et al. (in press), "Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)," in [_Proceedings of SPIE Medical Imaging (SPIE-MI 2026), Vancouver, Canada, February 15-19, 2026_], (2026).
+**Publication**: Bartz, K.M. _et al_. (in press), "Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)," in [_Proceedings of SPIE Medical Imaging (SPIE-MI 2026), Vancouver, Canada, February 15-19, 2026_], (2026).
+
+**Citation**:
+
+```
+@inproceedings{bartz2026inpress,
+  title={Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)},
+  author={Bartz, Kathleen M and Remedios, Samuel W and Dewey, Blake E and Hays, Savannah P, and Prince, Jerry L and Carass, Aaron},
+  booktitle={"Proceedings of SPIE Medical Imaging~(SPIE-MI 2026), Vancouver, Canada, February 15 -- 19, 2026"},
+  year={2026}
+}
+```
+
+## Quick Start
+
+We recommend starting from a fresh python installation.
+
+```
+conda create -n safe python=3.10
+conda activate safe
+```
+
+Clone and install this repository.
+
+```
+git clone https://github.com/katembartz/SAFE
+cd SAFE
+pip install .
+```
+
+Run SAFE on your directory of segmentations. Additional details can be found in section 2 below.
+
+```
+safe \
+  --in-dir {folder_path_to_segmentations} \
+  [--results-dir {folder_path_to_store_results}] \
+  [--head-dir {path_to_safe_installation}] \
+  [--synth] \
+  [--slant]
+```
 
 ## 1. Introduction and Motivation
 
@@ -25,7 +63,7 @@ Due to ventricle enlargement that accompanies age and other diseases, the six re
 
 ### To run SAFE:
 
-Clone and install this repository. Then, run the following command within the project directory.
+As mentioned above, to run SAFE, clone and install this repository. Then, run the following command within the project directory.
 
 ```
 safe \
