@@ -20,9 +20,9 @@ SAFE is a binary method that takes two inputs: a MDD containing the mean volume 
 
 Due to ventricle enlargement that accompanies age and other diseases, the six regions that encompass the ventricles—3rd ventricle, 4th ventricle, right and left lateral ventricle, and right and left inferior lateral ventricle—were excluded from the SAFE method. The remaining 126 brain regions for SLANT and 92 brain regions for SynthSeg informed the statistical measures stored in the MDD and factored in to the SAFE output decision.
 
-**To run SAFE**
+### To run SAFE:
 
-Clone and install this repository. Then, run the following command in the project directory.
+Clone and install this repository. Then, run the following command within the project directory.
 
 ```
 safe \
@@ -33,9 +33,17 @@ safe \
   [--slant]
 ```
 
-If `--results-dir` is not specified, the output results are stored in a new folder on the path `--in-dir`. Include the arguments `--synth` and `--slant` to specify which types of segmentations are present in `in-dir`. **Note:** the segmentations must contain the string '_slant' or '_synth' to denote which method (SLANT or SynthSeg, respectively) were applied to generate the resulting segmentation.
+If `--results-dir` is not specified, the output results are stored in a new folder on the path given after `--in-dir`. Include the arguments `--synth` and `--slant` to specify which types of segmentations are present in path for `--in-dir`. **Note:** the segmentations must contain the string '_slant' or '_synth' to denote which method (SLANT or SynthSeg, respectively) were applied to generate the resulting segmentation.
 
-The output results include...
+The output results include two csv files indicating the SAFE decisions for the corresponding SLANT and SynthSeg segmentations, respectively. Some additional information is provided to aid in further analysis of the data:
+
+1. _zero_count_: counts how many regions were missing (volume of 0 $mm^3$) -- factor in SAFE decision
+2. _occ_95_count_: counts how many regions by brain occupancy were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision, but is provided to allow additional analysis.
+3. _occ_99_count_: counts how many regions by brain occupancy were outliers (outside of 99% CI) -- factor in SAFE decision
+4. _vol_95_count_: counts how many regions by volume were between the 95% confidence interval (CI) and 99% CI, based on the normative measures. This measure is not included in the SAFE decision, but is provided to allow additional analysis.
+5. _vol_99_count_: counts how many regions by volume were outliers (outside of 99% CI) -- factor in SAFE decision
+
+The regions included in each of these five groups are also listed in the resulting data tables. These categories are mutually exclusive.
 
 
 ## 4. Acknowledgments
