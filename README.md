@@ -3,12 +3,12 @@
 # SAFE
 Automated quality assurance of segmentation techniques with SAFE: statistically-based failure evaluation.
 
-**Publication**: Bartz, K.M. _et al_. (in press), "Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)," in [_Proceedings of SPIE Medical Imaging (SPIE-MI 2026), Vancouver, Canada, February 15-19, 2026_], (2026).
+**Publication**: Bartz, K.M. _et al_., "Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)," in [_Proceedings of SPIE Medical Imaging (SPIE-MI 2026), Vancouver, Canada, February 15-19, 2026_], (2026).
 
 **Citation**:
 
 ```
-@inproceedings{bartz2026inpress,
+@inproceedings{bartz2026SAFE,
   title={Automated quality assurance of segmentation techniques with statistically-based failure evaluation (SAFE)},
   author={Bartz, Kathleen M and Remedios, Samuel W and Dewey, Blake E and Hays, Savannah P, and Prince, Jerry L and Carass, Aaron},
   booktitle={"Proceedings of SPIE Medical Imaging~(SPIE-MI 2026), Vancouver, Canada, February 15 -- 19, 2026"},
